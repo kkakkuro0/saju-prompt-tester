@@ -3,12 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --primary-color: #6b46c1;
+  --secondary-color: #4c1d95;
+  --accent-color: #8b5cf6;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gradient-to-br from-purple-50 to-indigo-100 min-h-screen;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300;
+}
+
+.btn-primary {
+  @apply bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply bg-transparent border border-purple-600 text-purple-600 hover:bg-purple-100 font-medium py-2 px-4 rounded-md transition-colors duration-300;
 }

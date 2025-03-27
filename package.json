@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:skip-type-check": "NEXT_SKIP_TYPE_CHECK=true next build",
     "start": "next start",
+    "start:prod": "NODE_ENV=production next start",
     "lint": "next lint"
   },
   "dependencies": {
